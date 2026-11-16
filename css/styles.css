@@ -72,7 +72,7 @@ body.dark {
   --color-success: #1E7B3A;
   color-scheme: dark;
   --color-accent: #FF6B6B;
-  --color-highlight #FFD166
+  --color-highlight #FFD166cc
 }
 /* ---------- 2. Base and reset ---------- */
 *,
@@ -468,8 +468,8 @@ textarea[aria-invalid="true"] {
 
   .site-nav ul {
     flex-direction: column;
-  }
-
+  }H
+H
   .section {
     padding-block: var(--space-3);
   }
