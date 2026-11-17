@@ -442,7 +442,7 @@ textarea[aria-invalid="true"] {
   .site-nav ul {
     flex-direction: column;
   }
-  
+
   .section {
     padding-block: var(--space-3);
   }
@@ -454,5 +454,11 @@ textarea[aria-invalid="true"] {
   *::before,
   *::after {
     transition: none !important;
+  }
+
+  #project-search{
+    display: block;
+    width: 100%;
+    margin-bottom: 16px;
   }
 }

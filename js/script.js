@@ -95,7 +95,7 @@
 
     filterButtons.forEach((button) => {
       button.addEventListener('click', () => {
-        filterbuttons.forEach((btn) => btn.setAttribute('aria-pressed', 'false'));
+        filterButtons.forEach((btn) => btn.setAttribute('aria-pressed', 'false'));
         button.setAttribute('aria-pressed', 'true');
         renderProjects(button.dataset.filter)
       });
