@@ -59,7 +59,7 @@
   const categoryNames ={ html: 'HTML', css: 'CSS', JS: 'JavaScript', git: 'Git' };
 
   const projectList = document.querySelector('#project-list');
-  const ProjectCount = document.querySelector('#project-count');
+  const projectCount = document.querySelector('#project-count');
   const filterButtons = document.querySelectorAll('.filter-btn');
 
   function renderProjects(filter) {
