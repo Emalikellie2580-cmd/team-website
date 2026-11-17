@@ -87,7 +87,7 @@
       projectList.append(card);
     });
     
-    projectCount.textContent = 'showing ${visible.length} of ${projects.length} projects';
+    projectCount.textContent = `showing ${visible.length} of ${projects.length} projects`;
   }
 
   if (projectList) {
