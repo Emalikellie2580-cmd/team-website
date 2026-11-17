@@ -52,9 +52,11 @@
     { title: 'Accessible contact form', category: 'html', description: 'Labelled fields, helpful errors and keyboard-friendly controls.' },
     { title: 'Dark mode toggle', category: 'js', description: 'Switches the colour theme and remembers the choice.' },
     { title: 'Flexbox navigation bar', category: 'css', descripton: 'A header that collapses into a menu button on small screens.' },
+    { title: 'Interactive quiz app', category: 'js', description: 'Dynamic multiple-choice questions'},
+    { title: 'Team Git workflow', category: 'git', description: 'Collaborative version control respiratory with co-authored commits.'},
   ];
 
-  const categoryNames ={ html: 'HTML', css: 'CSS', JS: 'JavaScript' };
+  const categoryNames ={ html: 'HTML', css: 'CSS', JS: 'JavaScript', git: 'Git' };
 
   const projectList = document.querySelector('#project-list');
   const ProjectCount = document.querySelector('#project-count');
@@ -112,9 +114,19 @@
     const charCount = document.querySelector('#char-count');
     const statusEl = document.querySelector('#form-status');
 
+    // Load any saved draft when the user reloads the page.
+    const savedMessage = localStorage.getItem('draftMessage');
+    if (savedMessage && messageInput) {
+      messageInput.value = savedMessage;
+      charCount.textContent = messageInput.value.length; // Updates characters after a load.
+    }
+
     // Live character Counter.
     messageInput.addEventListener('input', () => {
       charCount.textContent = messageInput.value.length;
+
+    // Save the draftto localStorage on every key stroke
+    localStorage.setItem('draftMessage', messageInput.value);
     });
 
     // Show (or clear) the error mesage under one field.
