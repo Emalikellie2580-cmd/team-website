@@ -441,8 +441,8 @@ textarea[aria-invalid="true"] {
 
   .site-nav ul {
     flex-direction: column;
-  }H
-H
+  }
+  
   .section {
     padding-block: var(--space-3);
   }
