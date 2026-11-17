@@ -83,7 +83,7 @@
       const text = document.createElement('p');
       text.textContent = project.description;
 
-      card.append(tag, headingc, test);
+      card.append(tag, heading, text);
       projectList.append(card);
     });
     
