@@ -4,14 +4,14 @@
    ===================================================== */
 
 /* ---------- 1. Design tokens ---------- */
-/* =====================================================
-   :root:
+/* ===================================================== */
+   :root {
     --color-bg: #f6f7f4;
-    --colo-surface:#ffffff;
+    --color-surface:#ffffff;
     --color-text: #1c2430;
     --color-muted:#5a6474;
-    --color-primary: #0f6e6e;
-    --color-primary-dark: #0a5050;
+    --color-primary: #1d63ed;
+    --color-primary-dark: #1243a6;
     --color-on-primary: #ffffff;
     --color-border: #dde1e6;
     --color-error: #b3261e;
@@ -35,45 +35,15 @@ body.dark {
   --color-surface: #1a212b;
   --color-text: #e7ebf0;
   --color-muted: #a2abb9;
-  --color-
-  --color-surface: #ffffff;
-  --color-text: #1c2430;
-  --color-muted: #5a6474;
-  --color-primary: #0f6e6e;
-  --color-primary-dark: #0a5050;
-  --color-on-primary: #ffffff;
-  --color-border: #dde1e6;
-  --color-error: #b3261e;
-  --color-success: #1e7b3a;
-
-  --font-body: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
-  --font-heading: Georgia, "Times New Roman", serif;
-
-  --space-1: 0.5rem;
-  --space-2: 1rem;
-  --space-3: 1.5rem;
-  --space-4: 2.5rem;
-  --space-5: 4rem;
-
-  --radius: 10px;
-  --max-width: 1080px;
-}
-
-body.dark {
-  --color-bg: #FFF8F1;
-  --color-surface: #FFFFFF;
-  --color-text: #e7ebf0;
-  --color-muted: #625D73;
-  --color-primary: #5B3FD6;
-  --color-primary-dark: #4527AO;
+  --color-primary: #4f8cf6;
+  --color-primary-dark: #1d63ed;
   --color-on-primary: #0b1f1f;
-  --color-border: #E8DFF5;
-  --color-error: #B3261E;
-  --color-success: #1E7B3A;
-  color-scheme: dark;
-  --color-accent: #FF6B6B;
-  --color-highlight #FFD166cc
+  --color-border: #2b3340;
+  --color-error: #ff8a80;
+  --color-success: #7ddc97;
 }
+
+
 /* ---------- 2. Base and reset ---------- */
 *,
 *::before,
@@ -305,6 +275,7 @@ img{
 .skill-list li {
   margin-bottom: var(--space-1);
 }
+
 /* ---------- 6. Cards and grids ---------- */
 .team-grid,
 .project-grid {
@@ -344,6 +315,8 @@ img{
 
 .skill-list li {
   margin-bottom: var(--space-1);
+}
+
   /* ---------- 7. Projects page ---------- */
 .filters {
   display: flex;
@@ -483,12 +456,3 @@ H
     transition: none !important;
   }
 }
-
-
-
-  
-
-
-
-
-
