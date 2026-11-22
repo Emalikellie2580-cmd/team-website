@@ -15,7 +15,7 @@
 ## Personalisation
 - Our colours: light mode uses a soft off-white background('#f6f7f4'), dark slate text ('#1c2430').
 - Projects we added: Added "Interactive quiz app" (under the JavaScript category) and "Team Git workflow" (under a new "Git" category, complete with a matching filter button in 'projects.html').
-- Extension challenge(s) completed: E3 (Search the projects with live input filtering) and E4 (Save a draft message).
+- Extension challenge(s) completed: E3 (Search the projects with live input filtering), E2 (Follow the system theme), E4 (Save a draft message) and E6 (Adding Real photos).
 
 ## Reflection
 1. By using a <div> affects the users with visual impairments by reducing accessibility.
