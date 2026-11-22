@@ -70,7 +70,7 @@
   function renderProjects() {
     if (!projectList) return;
     
-    const query = searchInput ? searchInput.value.trim.toLowerCase() : '';
+    const query = searchInput ? searchInput.value.trim().toLowerCase() : '';
 
     const visible = projects.filter((project) =>{
       const matchesCategory = currentFilter === 'all' || project.category === currentFilter;
