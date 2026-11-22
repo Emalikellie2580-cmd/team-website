@@ -33,7 +33,9 @@
     }
   }
 
-  applyTheme(localStorage.getItem(THEME_KEY));
+    const savedTheme = localStorage.getItem(THEME_KEY);
+    const systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    applyTheme(savedTheme ?? (systemDark ? 'dark' : 'light'));
 
   if (themeToggle) {
     themeToggle.addEventListener('click', () => {
@@ -62,14 +64,29 @@
   const projectCount = document.querySelector('#project-count');
   const filterButtons = document.querySelectorAll('.filter-btn');
 
-  function renderProjects(filter) {
-    const visible = filter === 'all'
-    ? projects
-    : projects.filter((project) => project.category === filter);
+  const searchInput = document.querySelector('#project-search');
+  let currentFilter = 'all';
+
+  function renderProjects() {
+    if (!projectList) return;
+    
+    const query = searchInput ? searchInput.value.trim.toLowerCase() : '';
+
+    const visible = projects.filter((project) =>{
+      const matchesCategory = currentFilter === 'all' || project.category === currentFilter;
+      const matchesTitle = project.title.toLowerCase().includes(query);
+      return matchesCategory && matchesTitle;
+    });
 
     projectList.replaceChildren();
-
-    visible.forEach((project) => {
+    if (visible.length === 0){
+      const emptyMsg = document.createElement('p');
+      emptyMsg.className = 'empty-state';
+      emptyMsg.textContent = 'No projects match your search. Try another keyword or category.';
+      projectList.append(emptyMsg);
+    } else {
+      
+      visible.forEach((project) => {
       const card = document.createElement('article');
       card.className = 'card';
 
@@ -86,20 +103,26 @@
       card.append(tag, heading, text);
       projectList.append(card);
     });
+  }
     
     projectCount.textContent = `showing ${visible.length} of ${projects.length} projects`;
   }
 
   if (projectList) {
-    renderProjects('all');
+    renderProjects();
 
     filterButtons.forEach((button) => {
       button.addEventListener('click', () => {
+        currentFilter = button.dataset.filter;
         filterButtons.forEach((btn) => btn.setAttribute('aria-pressed', 'false'));
         button.setAttribute('aria-pressed', 'true');
-        renderProjects(button.dataset.filter)
+        renderProjects();
       });
     });
+
+    if (searchInput){
+      searchInput.addEventListener('input', renderProjects);
+    }
   }
 
    
