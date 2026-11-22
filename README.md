@@ -18,9 +18,14 @@
 - Extension challenge(s) completed: E3 (Search the projects with live input filtering) and E4 (Save a draft message).
 
 ## Reflection
-1. Working together using Git branches helped us avoid overwriting each other's code.
-2. Setting up GitHub pages showeed ushow static website are deployed directly from a repository.
-3. The live share in Vs code has helped track each other's progress.
-4. The push and pull method became easier as we coded more.
-5. Resolving a merge conflict in README.MD taught us how Git tracks simultaneous edits.
-6. Using local storage to save and restore draft messages taught us how to persist user data acrpss page reloads without needing a backend database.
+1. By using a <div> affects the users with visual impairments by reducing accessibility.
+It would also remove the keyboard support meaning users who use enter could have difficulty.
+2. In absence of defer the browser executes the JavaScript as soon as it encounters the <script> tag while parsing the HTML.
+If the script tries to access elements that have not yet been created in the DOM, it may cause errors or fail to work correctly. The defer attribute ensures the script runs only after the HTML has been fully parsed.
+3. If project titles were typed in by visitors, the visitor could enter HTML or JavaScript code that would be interpreted and executed by the browser hence leading to Cross-Site Scripting (XSS) attacks, allowing malicious users to inject harmful content into the page. Alternatively textContent displays the text safely without executing any code.
+4. Client-side JavaScript validation can be bypassed by disabling JavaScript or sending data directly to the server. Because users can manipulate or submit invalid data the server must perform its own validation to ensure the data is correct and secure. Server-side validation protects the application from malicious or incorrect input.
+5. Browser storage such as localStorage is tied to a specific origin which consists of the protocol, domain and port. Home and Contact pages share the same origin when served through Live Server hence they can access the same stored theme setting. A file opened directly from the file system (file://) has a different origin hence it can't share the same stored data.
+6. The navigation bar, header, or footer is often duplicated across multiple HTML pages. This duplication makes maintenance harder because any change must be updated in every file increasing the risk of inconsistencies. It can be avoided by using reusable components, templates, or JavaScript to load shared content from a single source.
+
+# Should the alt repeat the person's name when the name is already in the heading right below it?
+1. Answer is no. The alt text should communicate that information and not simply repeat nearby content.
