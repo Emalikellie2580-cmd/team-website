@@ -261,6 +261,7 @@ img{
   color: var(--color-on-primary);
   font-size: 1.25rem;
   font-weight: 700;
+  object-fit: cover;
 }
 
 .role {
@@ -302,6 +303,7 @@ img{
   color: var(--color-on-primary);
   font-size: 1.25rem;
   font-weight: 700;
+  object-fit: cover;
 }
 
 .role {
